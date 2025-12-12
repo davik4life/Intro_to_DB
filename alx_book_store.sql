@@ -1,4 +1,10 @@
-database alx_book_store;
+CREATE DATABASE IF NOT EXISTS alx_book_store;
+USE alx_book_store;
+
+CREATE TABLE IF NOT EXISTS Authors (
+    author_id INT PRIMARY KEY,
+    author_name VARCHAR(215)
+);
 
 CREATE TABLE IF NOT EXISTS Books (
     book_id INT PRIMARY KEY,
