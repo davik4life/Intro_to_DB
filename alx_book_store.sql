@@ -34,7 +34,7 @@ quantity DOUBLE
 NOTE : - The file extension should be alx_book_store.sql file - All SQL keywords should be in uppercase
 */
 
-CREATE TABLE Books (
+CREATE TABLE IF NOT EXISTS Books (
     book_id INT PRIMARY KEY,
     title VARCHAR(130),
     author_id INT FOREIGN KEY REFERENCES Authors(author_id),
@@ -42,25 +42,25 @@ CREATE TABLE Books (
     publication_date DATE,
 )
 
-CREATE TABLE Authors (
+CREATE TABLE IF NOT EXISTS Authors (
     author_id INT PRIMARY KEY,
     author_name VARCHAR(215),
 )
 
-CREATE TABLE Customers (
+CREATE TABLE IF NOT EXISTS Customers (
     customer_id INT PRIMARY KEY,
     customer_name VARCHAR(215),
     email VARCHAR(215),
     address TEXT
 )
 
-CREATE TABLE Orders (
+CREATE TABLE IF NOT EXISTS Orders (
     order_id INT PRIMARY KEY,
     customer_id INT FOREIGN KEY REFERENCES Customers(customer_id),
     order_date DATE
 )
 
-CREATE TABLE Order_Details (
+CREATE TABLE IF NOT EXISTS Order_Details (
     orderdetailid INT PRIMARY KEY,
     order_id INT FOREIGN KEY REFERENCES Orders(order_id),
     book_id INT FOREIGN KEY REFERENCES Books(book_id),
