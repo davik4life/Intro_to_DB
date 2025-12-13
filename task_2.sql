@@ -47,3 +47,21 @@ Name of the file should be task_2.sql
 
 All SQL keywords should be in uppercase
 */
+
+
+# Create Books table
+cursor.execute("""CREATE TABLE IF NOT EXISTS Books (
+    book_id INT PRIMARY KEY,
+    title VARCHAR(130),
+    author_id INT,
+    price DOUBLE,
+    publication_date DATE,
+    FOREIGN KEY (author_id) REFERENCES Authors(author_id)
+)""")
+
+
+# Create Authors table
+cursor.execute("""CREATE TABLE IF NOT EXISTS Authors (
+               author_id INT PRIMARY KEY,
+               name VARCHAR(130)
+)""")   
