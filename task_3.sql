@@ -6,3 +6,4 @@ The database name will be passed as argument of mysql command
 */
 
 SHOW TABLES;
+USE alx_book_store;
