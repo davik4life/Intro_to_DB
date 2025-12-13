@@ -25,5 +25,3 @@ cursor.execute("USE alx_book_store")
 db.commit()
 cursor.close()
 db.close()
-
-# Ends here...
