@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS Authors (
 CREATE TABLE IF NOT EXISTS Books (
     book_id INT PRIMARY KEY,
     title VARCHAR(130),
-    author_id INT FOREIGN KEY REFERENCES Authors(author_id),
+    author_id INT FOREIGN KEY (author_id) REFERENCES Authors(author_id),
     price DOUBLE,
     publication_date DATE,
 )
