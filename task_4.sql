@@ -7,6 +7,6 @@ The name of the file should be task_4.sql
 All SQL keywords should be in uppercase
 */
 
-SHOW CREATE TABLE books;
+SHOW CREATE TABLE books FROM alx_book_store;
 USE alx_book_store;
 
