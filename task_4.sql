@@ -7,10 +7,5 @@ The name of the file should be task_4.sql
 All SQL keywords should be in uppercase
 */
 
-SELECT COLUMN_NAME, COLUMN_TYPE, IS_NULLABLE, COLUMN_KEY, COLUMN_DEFAULT, EXTRA
--- FROM INFORMATION_SCHEMA.COLUMNS
-WHERE TABLE_SCHEMA = 'alx_book_store' AND TABLE_NAME = 'Books';
-
-SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'Books'; --- IGNORE ---
-WHERE TABLE_SCHEMA = 'alx_book_store' AND TABLE_NAME = 'Books'; --- IGNORE ---
--- Ends here... --- IGNORE ---
+SHOW CREATE TABLE Books;
+USE alx_book_store;
